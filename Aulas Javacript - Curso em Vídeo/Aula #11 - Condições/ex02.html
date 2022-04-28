@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qual seu país?</title>
+
+    <style>
+      body {
+        background-color: grey;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+    <label for="pais">Qual seu país de origem?</label>
+    <input type="text" name="pais" id="pais" /><br />
+    <input type="button" value="Verificar" onclick="verificar()" />
+    <div id="resultado"></div>
+
+    <script>
+      function verificar() {
+        var pais = document.querySelector("#pais");
+        var res = document.querySelector("#resultado");
+        var restext = toString(res);
+        console.log(typeof restext)
+        
+        if (pais != 'Brasil') {
+          res.innerHTML = "Você é estrangeiro!";
+          
+        } else {
+            res.innerHTML = "Você é brasileiro!";
+        }
+      }
+    </script>
+  </body>
+</html>
